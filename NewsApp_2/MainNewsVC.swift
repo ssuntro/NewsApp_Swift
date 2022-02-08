@@ -23,6 +23,10 @@ extension MainNewsVC: UITableViewDataSource {
         return cell
     }
     
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        performSegue(withIdentifier: "newsSegue", sender: nil)
+    }
 }
 
 extension MainNewsVC: UITableViewDelegate {
@@ -31,7 +35,7 @@ extension MainNewsVC: UITableViewDelegate {
     }
     
     func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
-        return true
+        true
     }
     
     func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
@@ -39,8 +43,12 @@ extension MainNewsVC: UITableViewDelegate {
         news.insert(elem, at: destinationIndexPath.row)
     }
     
-    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
-        
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        .none
+    }
+    
+    func tableView(_ tableView: UITableView, shouldIndentWhileEditingRowAt indexPath: IndexPath) -> Bool {
+        false
     }
 }
 
@@ -51,6 +59,9 @@ class MainNewsVC: UIViewController {
         didSet {
             tableView.reloadData()
         }
+    }
+    @IBAction func refreshButtonDidClick(_ sender: Any) {
+        news = stubData
     }
     
     override func viewDidLoad() {
