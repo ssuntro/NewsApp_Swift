@@ -20,6 +20,8 @@
 		BB91E26227B0D37200395AC6 /* dino.json in Resources */ = {isa = PBXBuildFile; fileRef = BB91E26127B0D37200395AC6 /* dino.json */; };
 		BB91E26427B0E43700395AC6 /* MainNewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91E26327B0E43700395AC6 /* MainNewsVC.swift */; };
 		BB91E26627B113B300395AC6 /* NewsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91E26527B113B300395AC6 /* NewsTableViewCell.swift */; };
+		BB91E26827B21AA800395AC6 /* MainNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91E26727B21AA800395AC6 /* MainNewsTableViewCell.xib */; };
+		BB91E26A27B23A5A00395AC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91E26927B23A5A00395AC6 /* News.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,6 +59,8 @@
 		BB91E26127B0D37200395AC6 /* dino.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = dino.json; sourceTree = "<group>"; };
 		BB91E26327B0E43700395AC6 /* MainNewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainNewsVC.swift; sourceTree = "<group>"; };
 		BB91E26527B113B300395AC6 /* NewsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsTableViewCell.swift; sourceTree = "<group>"; };
+		BB91E26727B21AA800395AC6 /* MainNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainNewsTableViewCell.xib; sourceTree = "<group>"; };
+		BB91E26927B23A5A00395AC6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -111,7 +115,9 @@
 				BB91E26027B0CA1500395AC6 /* NewsApp_2.entitlements */,
 				BB91E22D27B0C50F00395AC6 /* AppDelegate.swift */,
 				BB91E22F27B0C50F00395AC6 /* SceneDelegate.swift */,
+				BB91E26927B23A5A00395AC6 /* News.swift */,
 				BB91E26527B113B300395AC6 /* NewsTableViewCell.swift */,
+				BB91E26727B21AA800395AC6 /* MainNewsTableViewCell.xib */,
 				BB91E26327B0E43700395AC6 /* MainNewsVC.swift */,
 				BB91E23127B0C50F00395AC6 /* SplashViewController.swift */,
 				BB91E23327B0C50F00395AC6 /* Main.storyboard */,
@@ -253,6 +259,7 @@
 				BB91E23A27B0C51400395AC6 /* LaunchScreen.storyboard in Resources */,
 				BB91E23727B0C51400395AC6 /* Assets.xcassets in Resources */,
 				BB91E23527B0C50F00395AC6 /* Main.storyboard in Resources */,
+				BB91E26827B21AA800395AC6 /* MainNewsTableViewCell.xib in Resources */,
 				BB91E26227B0D37200395AC6 /* dino.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -278,6 +285,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BB91E26A27B23A5A00395AC6 /* News.swift in Sources */,
 				BB91E23227B0C50F00395AC6 /* SplashViewController.swift in Sources */,
 				BB91E22E27B0C50F00395AC6 /* AppDelegate.swift in Sources */,
 				BB91E26627B113B300395AC6 /* NewsTableViewCell.swift in Sources */,

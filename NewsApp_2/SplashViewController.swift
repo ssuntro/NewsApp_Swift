@@ -22,7 +22,7 @@ class SplashViewController: UIViewController {
             
             let demoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainNewsVC") as! MainNewsVC
             //UIViewController()
-            demoVC.view.backgroundColor = .systemCyan
+//            demoVC.view.backgroundColor = .systemCyan
             
             //option1
 //            demoVC.modalPresentationStyle = .pageSheet

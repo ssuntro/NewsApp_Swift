@@ -15,7 +15,11 @@ extension MainNewsVC: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "NewsTableViewCell", for: indexPath) as! NewsTableViewCell
-        cell.titleLabel.text = news[indexPath.row]
+        cell.titleLabel.text = news[indexPath.row].title
+        cell.badge.tintColor = news[indexPath.row].status.color
+        cell.badge.backgroundColor = .clear
+        cell.badge.setTitle(news[indexPath.row].status.rawValue, for: .normal)
+        cell.thumbnailImageView.image = UIImage(named: news[indexPath.row].category.imageName)
         return cell
     }
 }
@@ -26,29 +30,35 @@ extension MainNewsVC: UITableViewDelegate {
     }
 }
 
+
 class MainNewsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-    let news = ["title1", "title2", "title3"]
+//    let news = ["title1", "title2", "title3"]
+    var news = [News]() {
+        didSet {
+            tableView.reloadData()
+        }
+    }
     
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        tableView.register(UINib(nibName: "MainNewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
+        
+        news = stubData
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
     deinit {
         print("MainNewsVC deinit")
     }
 
 }
+
+//recap - funFact UI attribute override lv scuh as bgColor/tineColor (storyboard, layoutsubView, cellForRow) using breakpoint
+//recap - stubData + display
+//IBoutlet life cycle
+
+//see compile result
+//
+

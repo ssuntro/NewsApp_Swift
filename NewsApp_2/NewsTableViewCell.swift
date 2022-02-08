@@ -11,7 +11,7 @@ class NewsTableViewCell: UITableViewCell {
 
     @IBOutlet weak var badge: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
-    
+    @IBOutlet weak var thumbnailImageView: UIImageView!
     
     override func layoutSubviews() {
         super.layoutSubviews()
@@ -19,20 +19,9 @@ class NewsTableViewCell: UITableViewCell {
         badge.clipsToBounds = true //marksToBounds
     }
     
+    //layoutSubviews, storyboard.cell.bgColor
+    //cellForRow.tintColor
     
     
-    
-    
-    
-//    override func awakeFromNib() {
-//        super.awakeFromNib()
-//        // Initialization code
-//    }
-
-//    override func setSelected(_ selected: Bool, animated: Bool) {
-//        super.setSelected(selected, animated: animated)
-//
-//        // Configure the view for the selected state
-//    }
 
 }
