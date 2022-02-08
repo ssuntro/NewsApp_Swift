@@ -22,18 +22,31 @@ extension MainNewsVC: UITableViewDataSource {
         cell.thumbnailImageView.image = UIImage(named: news[indexPath.row].category.imageName)
         return cell
     }
+    
 }
 
 extension MainNewsVC: UITableViewDelegate {
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 100
     }
+    
+    func tableView(_ tableView: UITableView, canMoveRowAt indexPath: IndexPath) -> Bool {
+        return true
+    }
+    
+    func tableView(_ tableView: UITableView, moveRowAt sourceIndexPath: IndexPath, to destinationIndexPath: IndexPath) {
+        let elem = news.remove(at: sourceIndexPath.row)
+        news.insert(elem, at: destinationIndexPath.row)
+    }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+    }
 }
 
 
 class MainNewsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
-//    let news = ["title1", "title2", "title3"]
     var news = [News]() {
         didSet {
             tableView.reloadData()
@@ -44,21 +57,21 @@ class MainNewsVC: UIViewController {
         super.viewDidLoad()
         tableView.dataSource = self
         tableView.delegate = self
+        
         tableView.register(UINib(nibName: "MainNewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
         
         news = stubData
     }
+    
+    @IBAction func reOrderButtonDidClick(_ sender: Any) {
+        print("reorder button จ้า")
+        tableView.isEditing = !tableView.isEditing
+    }
+    
     
     deinit {
         print("MainNewsVC deinit")
     }
 
 }
-
-//recap - funFact UI attribute override lv scuh as bgColor/tineColor (storyboard, layoutsubView, cellForRow) using breakpoint
-//recap - stubData + display
-//IBoutlet life cycle
-
-//see compile result
-//
 

@@ -36,6 +36,9 @@
                                 <rect key="frame" x="13" y="15" width="75.333333333333329" height="31"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="gray" title="Reorder"/>
+                                <connections>
+                                    <action selector="reOrderButtonDidClick:" destination="DUe-3S-r2Q" eventType="touchUpInside" id="M3C-dM-Vsy"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zkd-sT-Js8" userLabel="Refresh">
                                 <rect key="frame" x="103.33333333333331" y="15" width="73.666666666666686" height="31"/>
