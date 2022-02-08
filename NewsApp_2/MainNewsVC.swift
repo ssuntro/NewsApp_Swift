@@ -25,7 +25,7 @@ extension MainNewsVC: UITableViewDataSource {
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        performSegue(withIdentifier: "newsSegue", sender: nil)
+        performSegue(withIdentifier: "newsSegue", sender: indexPath.row)
     }
 }
 
@@ -60,6 +60,7 @@ class MainNewsVC: UIViewController {
             tableView.reloadData()
         }
     }
+    
     @IBAction func refreshButtonDidClick(_ sender: Any) {
         news = stubData
     }
@@ -79,6 +80,13 @@ class MainNewsVC: UIViewController {
         tableView.isEditing = !tableView.isEditing
     }
     
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "newsSegue",
+           let newsVC = segue.destination as? NewsVC,
+           let row = sender as? Int {
+            newsVC.data = news[row]
+        }
+    }
     
     deinit {
         print("MainNewsVC deinit")
