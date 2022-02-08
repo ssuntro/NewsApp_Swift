@@ -20,6 +20,12 @@ extension MainNewsVC: UITableViewDataSource {
     }
 }
 
+extension MainNewsVC: UITableViewDelegate {
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 100
+    }
+}
+
 class MainNewsVC: UIViewController {
     @IBOutlet weak var tableView: UITableView!
     let news = ["title1", "title2", "title3"]
@@ -27,6 +33,7 @@ class MainNewsVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
+        tableView.delegate = self
     }
     
 

@@ -9,7 +9,21 @@ import UIKit
 
 class NewsTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var badge: UIButton!
     @IBOutlet weak var titleLabel: UILabel!
+    
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        badge.layer.cornerRadius = badge.frame.size.height/2
+        badge.clipsToBounds = true //marksToBounds
+    }
+    
+    
+    
+    
+    
+    
 //    override func awakeFromNib() {
 //        super.awakeFromNib()
 //        // Initialization code
