@@ -17,6 +17,7 @@ class NewsTableViewCell: UITableViewCell {
         super.layoutSubviews()
         badge.layer.cornerRadius = badge.frame.size.height/2
         badge.clipsToBounds = true //marksToBounds
+        badge.isUserInteractionEnabled = false
     }
     
     //layoutSubviews, storyboard.cell.bgColor

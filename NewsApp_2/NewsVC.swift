@@ -17,6 +17,7 @@ class NewsVC: UIViewController {
         calenderButton.addTarget(self, action: #selector(calendarButtonDidClick), for: .touchUpInside)
         titleLabel.text = data.title
         bodyTextView.text = data.body
+        bodyTextView.isUserInteractionEnabled = false
     }
     
     @objc func calendarButtonDidClick(_ sender: Any) {
@@ -24,15 +25,17 @@ class NewsVC: UIViewController {
     }
     
     @IBAction func forMoreDetailDidClick(_ sender: Any) {
+        
     }
     @IBAction func removeButtonDidClick(_ sender: Any) {
+        
     }
     
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    
-    */
-
+    deinit {
+        print("NewsVC deinit")
+    }
 }
+
+
+
+//3. progress

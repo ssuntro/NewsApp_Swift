@@ -20,12 +20,14 @@ extension MainNewsVC: UITableViewDataSource {
         cell.badge.backgroundColor = .clear
         cell.badge.setTitle(news[indexPath.row].status.rawValue, for: .normal)
         cell.thumbnailImageView.image = UIImage(named: news[indexPath.row].category.imageName)
+        
         return cell
     }
     
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "newsSegue", sender: indexPath.row)
+        tableView.deselectRow(at: indexPath, animated: true)
     }
 }
 

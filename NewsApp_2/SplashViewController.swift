@@ -12,16 +12,13 @@ class SplashViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         self.view.backgroundColor = .systemPurple
         animateDinosaur()
         
-        //navigate after 5 sec
         DispatchQueue.main.asyncAfter(deadline: .now() + .seconds(1)) { [weak self] in
             print("after 5 seconds")
             
             let demoVC = UIStoryboard(name: "Main", bundle: nil).instantiateViewController(identifier: "MainNewsVC") as! MainNewsVC
-            //UIViewController()
 //            demoVC.view.backgroundColor = .systemCyan
             
             //option1
