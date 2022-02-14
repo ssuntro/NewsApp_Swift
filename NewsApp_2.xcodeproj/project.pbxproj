@@ -23,6 +23,8 @@
 		BB91E26827B21AA800395AC6 /* MainNewsTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = BB91E26727B21AA800395AC6 /* MainNewsTableViewCell.xib */; };
 		BB91E26A27B23A5A00395AC6 /* News.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91E26927B23A5A00395AC6 /* News.swift */; };
 		BB91E26C27B2620A00395AC6 /* NewsVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB91E26B27B2620A00395AC6 /* NewsVC.swift */; };
+		BBD5147827BA412F00074C98 /* MainNewsVC+UITableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5147727BA412F00074C98 /* MainNewsVC+UITableViewDataSource.swift */; };
+		BBD5147A27BA414D00074C98 /* MainNewsVC+UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBD5147927BA414D00074C98 /* MainNewsVC+UITableViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -63,6 +65,8 @@
 		BB91E26727B21AA800395AC6 /* MainNewsTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = MainNewsTableViewCell.xib; sourceTree = "<group>"; };
 		BB91E26927B23A5A00395AC6 /* News.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = News.swift; sourceTree = "<group>"; };
 		BB91E26B27B2620A00395AC6 /* NewsVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewsVC.swift; sourceTree = "<group>"; };
+		BBD5147727BA412F00074C98 /* MainNewsVC+UITableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainNewsVC+UITableViewDataSource.swift"; sourceTree = "<group>"; };
+		BBD5147927BA414D00074C98 /* MainNewsVC+UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "MainNewsVC+UITableViewDelegate.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,8 +123,10 @@
 				BB91E22F27B0C50F00395AC6 /* SceneDelegate.swift */,
 				BB91E26927B23A5A00395AC6 /* News.swift */,
 				BB91E26527B113B300395AC6 /* NewsTableViewCell.swift */,
+				BBD5147727BA412F00074C98 /* MainNewsVC+UITableViewDataSource.swift */,
 				BB91E26727B21AA800395AC6 /* MainNewsTableViewCell.xib */,
 				BB91E26B27B2620A00395AC6 /* NewsVC.swift */,
+				BBD5147927BA414D00074C98 /* MainNewsVC+UITableViewDelegate.swift */,
 				BB91E26327B0E43700395AC6 /* MainNewsVC.swift */,
 				BB91E23127B0C50F00395AC6 /* SplashViewController.swift */,
 				BB91E23327B0C50F00395AC6 /* Main.storyboard */,
@@ -291,8 +297,10 @@
 				BB91E26A27B23A5A00395AC6 /* News.swift in Sources */,
 				BB91E23227B0C50F00395AC6 /* SplashViewController.swift in Sources */,
 				BB91E22E27B0C50F00395AC6 /* AppDelegate.swift in Sources */,
+				BBD5147827BA412F00074C98 /* MainNewsVC+UITableViewDataSource.swift in Sources */,
 				BB91E26C27B2620A00395AC6 /* NewsVC.swift in Sources */,
 				BB91E26627B113B300395AC6 /* NewsTableViewCell.swift in Sources */,
+				BBD5147A27BA414D00074C98 /* MainNewsVC+UITableViewDelegate.swift in Sources */,
 				BB91E26427B0E43700395AC6 /* MainNewsVC.swift in Sources */,
 				BB91E23027B0C50F00395AC6 /* SceneDelegate.swift in Sources */,
 			);
@@ -474,7 +482,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewsApp_2/NewsApp_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K9N3ERF77J;
+				DEVELOPMENT_TEAM = NGDVVLJ25F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp_2/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "ข่าวมาเเล้วจ้า";
@@ -505,7 +513,7 @@
 				CODE_SIGN_ENTITLEMENTS = NewsApp_2/NewsApp_2.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
-				DEVELOPMENT_TEAM = K9N3ERF77J;
+				DEVELOPMENT_TEAM = NGDVVLJ25F;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = NewsApp_2/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "ข่าวมาเเล้วจ้า";
