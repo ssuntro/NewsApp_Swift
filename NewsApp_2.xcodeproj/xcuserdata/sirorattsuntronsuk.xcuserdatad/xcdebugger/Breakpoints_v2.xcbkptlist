@@ -7,16 +7,16 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "DB63821F-B280-4CFF-85CE-2BDE5A702F8E"
+            uuid = "12C79C87-5A8B-4D4F-9368-A0784E259131"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "NewsApp_2/NewsVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "28"
-            endingLineNumber = "28"
-            landmarkName = "forMoreDetailDidClick(_:)"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "eventViewController(_:didCompleteWith:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

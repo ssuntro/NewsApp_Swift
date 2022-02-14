@@ -124,7 +124,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="arrowshape.turn.up.forward" catalog="system"/>
                                 <connections>
-                                    <action selector="forMoreDetailDidClick:" destination="udv-2Q-TRH" eventType="touchUpInside" id="g6F-lA-Zqt"/>
+                                    <action selector="forMoreDetailDidClick:" destination="udv-2Q-TRH" eventType="touchUpInside" id="uz1-Xk-egk"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oCw-e2-sX2" userLabel="removeButton">
@@ -136,7 +136,7 @@
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" image="bin.xmark" catalog="system"/>
                                 <connections>
-                                    <action selector="removeButtonDidClick:" destination="udv-2Q-TRH" eventType="touchUpInside" id="Xst-4K-bzZ"/>
+                                    <action selector="removeButtonDidClick:" destination="udv-2Q-TRH" eventType="touchUpInside" id="mZ4-D1-RQR"/>
                                 </connections>
                             </button>
                         </subviews>
@@ -161,7 +161,7 @@
                     <navigationItem key="navigationItem" id="NGs-nA-cn4"/>
                     <connections>
                         <outlet property="bodyTextView" destination="O3b-OR-oGM" id="3AD-ji-dfC"/>
-                        <outlet property="calenderButton" destination="rn2-hE-7fY" id="dxp-9n-Jxk"/>
+                        <outlet property="calenderButton" destination="rn2-hE-7fY" id="SvS-jU-4ck"/>
                         <outlet property="titleLabel" destination="dw3-z2-5Sv" id="VqL-8A-8Rd"/>
                     </connections>
                 </viewController>
