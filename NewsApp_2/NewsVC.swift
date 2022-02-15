@@ -20,7 +20,15 @@ extension NewsVC: EKEventViewDelegate {
     }
 }
 
+
+//class AnnJa {
+//    var a: UIViewController
+//    init(vc: UIViewController) { a = vc }
+//}
+
 class NewsVC: UIViewController {
+//    lazy var aaaaa = AnnJa(vc: self)
+    var onRemovedButtonDidClick: ((_ selectedTitle: String) ->Void)?
     weak var delegate: NewsVCDelegate?
     
     @IBOutlet weak var titleLabel: UILabel!
@@ -33,6 +41,7 @@ class NewsVC: UIViewController {
         titleLabel.text = data.title
         bodyTextView.text = data.body
         bodyTextView.isUserInteractionEnabled = false
+//        let _ = aaaaa.a
     }
     
     let calendarStore = EKEventStore()
@@ -65,11 +74,24 @@ class NewsVC: UIViewController {
     @IBAction func removeButtonDidClick(_ sender: Any) {
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
-            self.delegate?.viewcontroller(self, didClickRemoveButtonWith: self.data.title)
+//            self.delegate?.viewcontroller(self, didClickRemoveButtonWith: self.data.title)
+            self.onRemovedButtonDidClick?(self.data.title)
         }
     }
+    func openBrowser() {
+        guard let url = URL(string: data.url), UIApplication.shared.canOpenURL(url) else {
+            return
+        }
+        UIApplication.shared.open(url, options: [:], completionHandler: nil)
+    }
     
-    
+    deinit {
+        print("NewsVC deinit")
+    }
+}
+
+
+
 //    func jumpToInstragram() {
 //        let appURL = URL(string: "fb://profile/555")!
 //        if UIApplication.shared.canOpenURL(appURL) {
@@ -81,21 +103,3 @@ class NewsVC: UIViewController {
 //            }
 //        }
 //    }
-    
-    func openBrowser() {
-        guard let url = URL(string: data.url), UIApplication.shared.canOpenURL(url) else {
-            return
-        }
-        UIApplication.shared.open(url, options: [:], completionHandler: nil)
-    }
-    
-    
-    
-    deinit {
-        print("NewsVC deinit")
-    }
-}
-
-
-
-//3. progress

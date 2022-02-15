@@ -10,11 +10,13 @@ import UIKit
 
 extension MainNewsVC: NewsVCDelegate {
     func viewcontroller(_ vc: NewsVC, didClickRemoveButtonWith title: String) {
-        print("didClickRemoveButtonWith Jaaa")
+        removeNews(with: title)
+    }
+    
+    func removeNews(with title: String) {
         if let index = news.firstIndex(where: { item in item.title == title }) {
             news.remove(at: index)
         }
-//        re-render table
     }
 }
 
@@ -38,7 +40,10 @@ class MainNewsVC: UIViewController {
         tableView.register(UINib(nibName: "MainNewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
         
         news = stubData
+        
+
     }
+    
     
     @IBAction func reOrderButtonDidClick(_ sender: Any) {
         print("reorder button จ้า")
@@ -51,12 +56,9 @@ class MainNewsVC: UIViewController {
            let row = sender as? Int {
             newsVC.data = news[row]
             newsVC.delegate = self
-//            newsVC.onRemoveButtonDidClick = { [weak self] (title: String) -> () in
-//                print("didClickRemoveButtonWith Jaaa")
-//                if let index = news.firstIndex(where: { item in item.title == title }) {
-//                    news.remove(at: index)
-//                }
-//            }
+            newsVC.onRemovedButtonDidClick = { [weak self] (title: String) -> () in
+                self?.removeNews(with: title)
+            }
         }
     }
     
