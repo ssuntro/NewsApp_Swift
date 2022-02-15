@@ -9,11 +9,15 @@ import Foundation
 import UIKit
 
 struct News {
-    let title: String
-    let status: NewsStatus
+    let detail: NewsDetail
     let category: NewsCategory
-    let body = "annJaannJa annJaannJaannJaannJaannJaannJaannJaannJaannJaannJa"
-    let url = "https://i.guim.co.uk/img/media/fe1e34da640c5c56ed16f76ce6f994fa9343d09d/0_174_3408_2046/master/3408.jpg?width=1200&height=1200&quality=85&auto=format&fit=crop&s=67773a9d419786091c958b2ad08eae5e"
+}
+
+struct NewsDetail: Decodable {
+    let title: String
+    let body: String
+    let status: NewsStatus
+    let url: String
 }
 
 enum NewsStatus: String, Codable {
@@ -33,18 +37,22 @@ enum NewsStatus: String, Codable {
     }
 }
 
-enum NewsCategory: String, Codable {
-    case animal
-    case globalWarming
-    case finance
+enum NewsCategory: Int, Codable {
+    case animal = 0
+    case globalWarming = 1
+    case finance = 2
     
     var imageName: String {
-        return rawValue
+        switch self {
+        case .animal:
+            return "animal"
+        case .globalWarming:
+            return "globalWarming"
+        case .finance:
+            return "finance"
+        }
     }
 }
 
 
-let stubData = [News(title: "news1", status: .closed, category: .animal),
-                News(title: "news2", status: .responded, category: .globalWarming),
-                News(title: "news3", status: .pendingResponse, category: .globalWarming),
-                News(title: "news4", status: .closed, category: .finance)]
+

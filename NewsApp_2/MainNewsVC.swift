@@ -14,23 +14,20 @@ extension MainNewsVC: NewsVCDelegate {
     }
     
     func removeNews(with title: String) {
-        if let index = news.firstIndex(where: { item in item.title == title }) {
+        if let index = news.firstIndex(where: { item in item.detail.title == title }) {
             news.remove(at: index)
         }
     }
 }
 
 class MainNewsVC: UIViewController {
-    @IBOutlet weak var tableView: UITableView!
+    var network = NewsFetcher()
     var news = [News]() {
         didSet {
             tableView.reloadData()
         }
     }
-    
-    @IBAction func refreshButtonDidClick(_ sender: Any) {
-        news = stubData
-    }
+    @IBOutlet weak var tableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -39,11 +36,27 @@ class MainNewsVC: UIViewController {
         
         tableView.register(UINib(nibName: "MainNewsTableViewCell", bundle: nil), forCellReuseIdentifier: "NewsTableViewCell")
         
-        news = stubData
         
+        fetchData()
 
     }
     
+    func fetchData() {
+        network.exe { [weak self] result in
+            self?.news = result
+        }
+//        print("1: Before task block")
+//        Task { [weak self] in
+//            let newsArray = await NewsFetcherAwait().task.result
+//            print("4: fetchData fetchDatafetchDatafetchDatafetchData")
+//        }
+//        print("2: After task block")
+        
+    }
+    
+    @IBAction func refreshButtonDidClick(_ sender: Any) {
+        fetchData()
+    }
     
     @IBAction func reOrderButtonDidClick(_ sender: Any) {
         print("reorder button จ้า")

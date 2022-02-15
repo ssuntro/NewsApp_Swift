@@ -21,13 +21,7 @@ extension NewsVC: EKEventViewDelegate {
 }
 
 
-//class AnnJa {
-//    var a: UIViewController
-//    init(vc: UIViewController) { a = vc }
-//}
-
 class NewsVC: UIViewController {
-//    lazy var aaaaa = AnnJa(vc: self)
     var onRemovedButtonDidClick: ((_ selectedTitle: String) ->Void)?
     weak var delegate: NewsVCDelegate?
     
@@ -35,11 +29,12 @@ class NewsVC: UIViewController {
     @IBOutlet weak var bodyTextView: UITextView!
     @IBOutlet weak var calenderButton: UIButton!
     var data: News!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         calenderButton.addTarget(self, action: #selector(calendarButtonDidClick), for: .touchUpInside)
-        titleLabel.text = data.title
-        bodyTextView.text = data.body
+        titleLabel.text = data.detail.title
+        bodyTextView.text = data.detail.body
         bodyTextView.isUserInteractionEnabled = false
 //        let _ = aaaaa.a
     }
@@ -75,11 +70,11 @@ class NewsVC: UIViewController {
         dismiss(animated: true) { [weak self] in
             guard let self = self else { return }
 //            self.delegate?.viewcontroller(self, didClickRemoveButtonWith: self.data.title)
-            self.onRemovedButtonDidClick?(self.data.title)
+            self.onRemovedButtonDidClick?(self.data.detail.title)
         }
     }
     func openBrowser() {
-        guard let url = URL(string: data.url), UIApplication.shared.canOpenURL(url) else {
+        guard let url = URL(string: data.detail.url), UIApplication.shared.canOpenURL(url) else {
             return
         }
         UIApplication.shared.open(url, options: [:], completionHandler: nil)
