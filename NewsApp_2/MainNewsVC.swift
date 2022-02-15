@@ -6,6 +6,7 @@
 //
 
 import UIKit
+import SwiftUI
 
 
 extension MainNewsVC: NewsVCDelegate {
@@ -29,6 +30,10 @@ class MainNewsVC: UIViewController {
     }
     @IBOutlet weak var tableView: UITableView!
     
+    @IBAction func loginButtonDidClick(_ sender: Any) {
+        let vc = UIHostingController(rootView: LoginView())
+        self.present(vc, animated: true, completion: nil)
+    }
     override func viewDidLoad() {
         super.viewDidLoad()
         tableView.dataSource = self
