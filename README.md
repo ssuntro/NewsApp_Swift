@@ -2,7 +2,7 @@
 
 This project is setup to be one of learning tools for "Practical iOS with UIKit & SwiftUI" course(4 days) to guide student who has experience of basic swift syntax but has no experience on iOS development from scratch till deliver their first iOS app to Apple store.
 
-For other version of "News app" which develop in difference mobile language and frameworksuch as Flutter, Android, React Native pls visit - [here]( https://github.com/ssuntro/news_app_flutter)   
+For other version of "News app" which develop in difference mobile language and frameworksuch as Flutter, native Android(Kotlin), React Native pls visit - [here]( https://github.com/ssuntro/news_app_flutter)   
 <br />
 
 ### Include topics
