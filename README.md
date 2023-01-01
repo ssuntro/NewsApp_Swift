@@ -2,7 +2,7 @@
 
 This project is setup to be one of learning tools for "Practical iOS with UIKit & SwiftUI" course(4 days) to guide student who has experience of basic swift syntax but has no experience on iOS development from scratch till deliver their first iOS app to Apple store.
 
-Note - For other version of "News app" such as Flutter, Android, React Native pls visit - [here](here https://github.com/ssuntro/news_app_flutter)   
+For other version of "News app" which develop in difference mobile language and frameworksuch as Flutter, Android, React Native pls visit - [here]( https://github.com/ssuntro/news_app_flutter)   
 <br />
 
 ### Include topics
@@ -30,7 +30,7 @@ Mainly is "*Make it right and make it fast*" topic.
 
 | Splash screen | News list screen | New Detail screen | Add calendar event screen | Signup screen(SwiftUI) |
 | ----------- | ----------- | ----------- | ----------- | ----------- |
-| <img width="200" alt="Splash screen" src="https://user-images.githubusercontent.com/17498546/210164540-e17fbd34-88ef-431e-af72-2d800e01f498.png"> | <img width="200" alt="Splash screen" src="https://user-images.githubusercontent.com/17498546/210164543-cdc07757-53a7-4fc0-a24f-54d89027ecd1.png"> | <img width="200" alt="Splash screen" src="https://user-images.githubusercontent.com/17498546/210164549-8495078d-2365-4a46-8323-1f59c57a8b40.png"> | <img width="200" alt="Splash screen" src="https://user-images.githubusercontent.com/17498546/210164551-510816b1-7330-483b-b543-6180e6b2d994.png"> | <img width="200" alt="Splash screen" src="https://user-images.githubusercontent.com/17498546/210164553-ef036182-663a-4d76-bac1-e4ff7c40cad5.png"> |
+| <img width="200" alt="Splash screen" src="https://user-images.githubusercontent.com/17498546/210164540-e17fbd34-88ef-431e-af72-2d800e01f498.png"> | <img width="200" alt="News list screen" src="https://user-images.githubusercontent.com/17498546/210164543-cdc07757-53a7-4fc0-a24f-54d89027ecd1.png"> | <img width="200" alt="New Detail screen" src="https://user-images.githubusercontent.com/17498546/210164549-8495078d-2365-4a46-8323-1f59c57a8b40.png"> | <img width="200" alt="Add calendar event screen" src="https://user-images.githubusercontent.com/17498546/210164551-510816b1-7330-483b-b543-6180e6b2d994.png"> | <img width="200" alt="Signup screen(SwiftUI)" src="https://user-images.githubusercontent.com/17498546/210164553-ef036182-663a-4d76-bac1-e4ff7c40cad5.png"> |
 
 
 
