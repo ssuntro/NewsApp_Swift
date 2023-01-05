@@ -13,6 +13,7 @@ This course is aim to "*Make it work first* and then make it right and make it f
 1. SwiftUI
 1. State management in UIKit and SwiftUI.
 1. What's need to be do to submit app to Apple store
+1. Network handling
 <br />
 
 
