@@ -1,4 +1,4 @@
-# News App("iOS native Swift" version)
+# News App("native Swift 4Days" version)
 
 This project is setup to be one of learning tools for "Practical iOS with UIKit & SwiftUI" course(4 days) to guide student who has experience of basic swift syntax but has no experience on iOS development from scratch till deliver their first iOS app to Apple store.
 
