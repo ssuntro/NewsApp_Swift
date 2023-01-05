@@ -5,7 +5,7 @@ This project is setup to be one of learning tools for "Practical iOS with UIKit 
 For other version of "News app" which develop in difference mobile language and frameworksuch as Flutter, native Android(Kotlin), React Native pls visit - [here]( https://github.com/ssuntro/news_app_flutter)   
 <br />
 
-### Include topics
+### Include learning topics
 This course is aim to "*Make it work first* and then make it right and make it fast in the next course". So this are 4 basic iOS development's learning topics that need to cover:
 1. Application life cycle
 1. Memory management under the hood.
@@ -15,7 +15,7 @@ This course is aim to "*Make it work first* and then make it right and make it f
 <br />
 
 
-### Exclude topics
+### Exclude learning topics
 Mainly is "*Make it right and make it fast*" topic.
 1. TDD 
 1. Design pattern
