@@ -1,6 +1,6 @@
 # News App("native Swift 4Days" version)
 
-This project involves setting up and delivering their first iOS project to the Apple store. It serves as a learning material for the "Basic Swift and iOSdevelopment" course and functions as a side project for both development and educational purposes.
+This project involves setting up and delivering their first iOS project to the Apple store. It serves as a learning material for the "Basic Swift and iOS development" course and functions as a side project for both development and educational purposes.
 
 For more information, to see full functionality of final "News app" please visit [here](https://github.com/ssuntro/NewsApp_Swift_final) and for other version of "News app" which develop in difference mobile language and frameworksuch as Flutter, native Android(Kotlin), React Native pls visit - [here]( https://github.com/ssuntro/news_app_flutter)   
 <br />
